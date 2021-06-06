@@ -1,6 +1,8 @@
 import "./App.css";
-import Input from "./components/Input/Input";
 import axios from "axios";
+
+import Input from "./components/Input/Input";
+import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 
 import { useState } from "react";
 
@@ -69,12 +71,13 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <h1 className="title">Weather App</h1>
       <Input
         onKeypress={keyPressHandler}
         onChange={changeHandler}
         value={city}
       />
+      {weatherData && <CurrentWeather weatherData={weatherData} />}
     </div>
   );
 }

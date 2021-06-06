@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.current-weather-div {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main,
+.secondary {
+  flex-basis: 50%;
+}
+
+.main {
+  position: relative;
+  color: white;
+}
+
+.place_time {
+  padding: 30px;
+  text-align: left;
+}
+
+.place_time .place {
+  line-height: 1.5;
+  font-size: 3.5rem;
+}
+
+.place_time .time {
+  font-size: 2rem;
+}
+
+.weather {
+  position: relative;
+}
+
+.weather .icon {
+  position: relative;
+  left: -10%;
+  width: 35%;
+  height: 35%;
+}
+
+.weather .temp {
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  font-size: 5rem;
+}
+
+.weather .desc {
+  position: absolute;
+  font-size: 2.5rem;
+  left: 55%;
+  top: 65%;
+}

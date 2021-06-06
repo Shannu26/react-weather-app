@@ -1,0 +1,32 @@
+.secondary-list {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 98%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.secondary-list-item {
+  flex-basis: 32%;
+  /* background-color: red; */
+  margin: 3px;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.secondary-list-item h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.secondary-list-item h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}

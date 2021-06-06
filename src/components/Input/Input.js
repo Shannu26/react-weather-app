@@ -3,7 +3,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 const Input = (props) => {
   return (
-    <div>
+    <div className="input-div">
       <i className="fa fa-search"></i>
       <input
         type="text"
