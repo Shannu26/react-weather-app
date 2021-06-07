@@ -4,6 +4,7 @@ import axios from "axios";
 import Input from "./components/Input/Input";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import ForecastWeather from "./components/ForecastWeather/ForecastWeather";
+import Error from "./components/Error/Error";
 
 import { useState, useRef } from "react";
 
@@ -12,9 +13,11 @@ const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState(false);
   const ref = useRef();
 
   const getWeather = async () => {
+    setError(false);
     try {
       const current_weather = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
@@ -61,6 +64,7 @@ function App() {
       console.log(data);
     } catch (err) {
       console.log(err.message);
+      setError(true);
     }
   };
 
@@ -84,10 +88,11 @@ function App() {
         value={city}
       />
       <div ref={ref}>
-        {weatherData && <CurrentWeather weatherData={weatherData} />}
-        {weatherData && (
+        {!error && weatherData && <CurrentWeather weatherData={weatherData} />}
+        {!error && weatherData && (
           <ForecastWeather forecast={weatherData.hourly_forecast} />
         )}
+        {error && <Error />}
       </div>
     </div>
   );
