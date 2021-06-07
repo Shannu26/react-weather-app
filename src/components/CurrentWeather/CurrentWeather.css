@@ -64,7 +64,72 @@
 
 .weather .desc {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
   left: 55%;
   top: 65%;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1200px) {
+  .place_time .place {
+    font-size: 3rem;
+  }
+
+  .place_time .time {
+    font-size: 1.8rem;
+  }
+
+  .weather .temp {
+    font-size: 4rem;
+  }
+
+  .weather .desc {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .place_time .place {
+    font-size: 2.5rem;
+  }
+
+  .place_time .time {
+    font-size: 1.3rem;
+  }
+
+  .weather .temp {
+    font-size: 3.5rem;
+  }
+
+  .weather .desc {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .current-weather-div {
+    display: block;
+  }
+
+  .secondary {
+    margin-left: 2%;
+  }
+
+  .place_time .place {
+    font-size: 2rem;
+  }
+
+  .place_time .time {
+    font-size: 1rem;
+  }
+
+  .weather .temp {
+    font-size: 3rem;
+  }
+
+  .weather .desc {
+    font-size: 1rem;
+    top: 70%;
+  }
 }

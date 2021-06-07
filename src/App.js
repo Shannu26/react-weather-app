@@ -3,14 +3,16 @@ import axios from "axios";
 
 import Input from "./components/Input/Input";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
+import ForecastWeather from "./components/ForecastWeather/ForecastWeather";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const ref = useRef();
 
   const getWeather = async () => {
     try {
@@ -51,6 +53,10 @@ function App() {
       });
 
       setWeatherData(data);
+      setTimeout(() => {
+        console.log(ref.current.offsetTop);
+        window.scrollTo(0, ref.current.offsetTop);
+      }, 500);
 
       console.log(data);
     } catch (err) {
@@ -77,7 +83,12 @@ function App() {
         onChange={changeHandler}
         value={city}
       />
-      {weatherData && <CurrentWeather weatherData={weatherData} />}
+      <div ref={ref}>
+        {weatherData && <CurrentWeather weatherData={weatherData} />}
+        {weatherData && (
+          <ForecastWeather forecast={weatherData.hourly_forecast} />
+        )}
+      </div>
     </div>
   );
 }
