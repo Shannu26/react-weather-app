@@ -11,8 +11,9 @@ const Input = (props) => {
       className="input-div"
       data-netlify="true"
       onSubmit={formSubmitHandler}
+      style={{ opacity: "80%" }}
     >
-      <i className="fa fa-search"></i>
+      <i className="fa fa-search" style={{ opacity: "50%" }}></i>
       <input
         type="text"
         name="city-name"
