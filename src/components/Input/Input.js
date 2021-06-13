@@ -2,8 +2,16 @@ import "./Input.css";
 import "font-awesome/css/font-awesome.min.css";
 
 const Input = (props) => {
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="input-div" data-netlify="true">
+    <form
+      className="input-div"
+      data-netlify="true"
+      onSubmit={formSubmitHandler}
+    >
       <i className="fa fa-search"></i>
       <input
         type="text"
@@ -14,7 +22,7 @@ const Input = (props) => {
         value={props.value}
         onChange={props.onChange}
       />
-    </div>
+    </form>
   );
 };
 
