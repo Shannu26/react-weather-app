@@ -3,7 +3,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 const Input = (props) => {
   return (
-    <div className="input-div">
+    <div className="input-div" data-netlify="true">
       <i className="fa fa-search"></i>
       <input
         type="text"
