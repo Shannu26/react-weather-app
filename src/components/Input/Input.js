@@ -7,6 +7,7 @@ const Input = (props) => {
       <i className="fa fa-search"></i>
       <input
         type="text"
+        name="city-name"
         className="input"
         placeholder="Enter City"
         onKeyPress={props.onKeypress}
