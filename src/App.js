@@ -5,6 +5,7 @@ import Input from "./components/Input/Input";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import ForecastWeather from "./components/ForecastWeather/ForecastWeather";
 import Error from "./components/Error/Error";
+import Footer from "./components/Footer/Footer";
 
 import { useState, useRef } from "react";
 
@@ -94,6 +95,7 @@ function App() {
         )}
         {error && <Error />}
       </div>
+      <Footer />
     </div>
   );
 }
