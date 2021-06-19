@@ -34,3 +34,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 500px) {
+  .forecast-weather {
+    margin-bottom: 15%;
+  }
+}
+
+@media (max-width: 300px) {
+  .forecast-weather {
+    margin-bottom: 20%;
+  }
+}

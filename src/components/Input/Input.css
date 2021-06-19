@@ -54,4 +54,12 @@
   .input-div {
     width: 90%;
   }
+
+  .input {
+    padding-left: 5%;
+  }
+
+  .input-div i {
+    width: 5%;
+  }
 }
