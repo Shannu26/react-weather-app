@@ -22,3 +22,13 @@
 .footer b {
   font-family: "Times New Roman", Times, serif;
 }
+
+@media (max-width: 500px) {
+  .footer h1 {
+    font-size: 1rem;
+  }
+
+  .footer {
+    height: 3rem;
+  }
+}
